@@ -3,60 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Under Construction</title>
+    <title>Gramsholler Homestead & Woodcraft | Artisan Showcase</title>
+    <!-- Tailwind CSS for modern, clean styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #0b0f19;
-            color: #f3f4f6;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            overflow: hidden;
-        }
-        .container {
-            max-width: 500px;
-            padding: 2rem;
-            z-index: 1;
-        }
-        .logo {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: float 3s ease-in-out infinite;
-        }
-        h1 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, #0070f3, #10b981);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            color: #9ca3af;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
         }
     </style>
 </head>
-<body>
+<body class="bg-stone-50 text-stone-800 font-sans">
 
-    <div class="container">
-        <div class="logo">🚀</div>
-        <h1>Coming Soon</h1>
-        <p>Your Vercel deployment is working perfectly. Sit tight while the rest of the magic happens behind the scenes!</p>
+    <!-- Header / Announcement -->
+    <div class="bg-amber-700 text-white text-center py-2 px-4 text-sm font-medium tracking-wide">
+        ✨ Catch us live next at <strong>Yakfest in St. Albans</strong> on June 19th & 20th! 
     </div>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4 text-amber-100">Gramsholler Homestead & Woodcraft</h1>
+            <p class="text-lg md:text-xl text-stone-300 max-w-2xl mx-auto mb-8">
+                Handcrafted heirloom wooden toys, traditional homestead provisions, and Appalachian heritage goods. 
+            </p>
+            <div class="inline-block bg-stone-900/60 border border-stone-700 rounded-lg p-4 backdrop-blur-sm">
+                <p class="text-amber-400 text-xs font-semibold uppercase tracking-wider">Online Catalog Only</p>
+                <p class="text-stone-200 text-sm mt-1">We are not selling online right now. Browse our project gallery below and reach out via email for inquiries or event pre-orders!</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Inventory Section -->
+    <main class="max-w-6xl mx-auto px-4 py-16">
+        
+        <h2 class="text-3xl font-serif font-bold text-center text-stone-900 mb-2">Our Signature Inventory</h2>
+        <p class="text-center text-stone-600 mb-12 max-w-lg mx-auto">A look at the handcrafted items we bring to festivals, markets, and fairs throughout the region.</p>
+
+        <!-- Category: Kitchen & Pantry -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold uppercase tracking-wider text-amber-800 border-b border-stone-200 pb-2 mb-6">Homestead Kitchen & Pantry</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Apple & Pear Butter -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1589416809623-35af0addcf47?auto=format&fit=crop&w=600&q=80" alt="Mason Jars" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Artisan Fruit Butters</h4>
+                        <p class="text-sm text-stone-600">Rich Apple Butter (made with traditional cloves & allspice) and sweet Pear Butter. Served in classic Mason jars. Funnel & ladle sets available!</p>
+                    </div>
+                </div>
+
+                <!-- Fudge -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=600&q=80" alt="Fudge Blocks" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Handmade Fudge Blocks</h4>
+                        <p class="text-sm text-stone-600">Rich, decadent blocks of scratch-made fudge, beautifully wrapped in traditional parchment paper.</p>
+                    </div>
+                </div>
+
+                <!-- Pepperoni Rolls & Dips -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=600&q=80" alt="Pepperoni Rolls" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">WV Pepperoni Rolls & Dip Mixes</h4>
+                        <p class="text-sm text-stone-600">A Mountain State classic! Fresh pepperoni rolls ready to eat, alongside our convenient, flavorful dry dip mix pouches.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Category: Heirloom Woodworking & Toys -->
+        <section class="mb-16">
+            <h3 class="text-xl font-bold uppercase tracking-wider text-amber-800 border-b border-stone-200 pb-2 mb-6">Heirloom Woodworking & Children's Toys</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Wood Scooters & Clackers -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1515488042361-404e9250afef?auto=format&fit=crop&w=600&q=80" alt="Wooden Toys" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Wooden Moving Toys</h4>
+                        <p class="text-sm text-stone-600">Built to last generations. Featuring kids' wood scooters with smooth casters, classic stick horses, and nostalgic wooden clacker pull-toys and cars.</p>
+                    </div>
+                </div>
+
+                <!-- Teepee & Mud Kitchen -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=600&q=80" alt="Playroom items" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Outdoor & Active Play</h4>
+                        <p class="text-sm text-stone-600">Kid-size umbrella teepees crafted from bamboo and heavy canvas, alongside our ultimate backyard Mud Kitchens for imaginative play.</p>
+                    </div>
+                </div>
+
+                <!-- Home Woodworking -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861effa?auto=format&fit=crop&w=600&q=80" alt="Wood Craft" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Home & Garden Woodcraft</h4>
+                        <p class="text-sm text-stone-600">Beautiful, functional decor including WV Swing Planters, sturdy cookbook/tablet holders, and heirloom recipe boxes built to protect family secrets.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Category: Heritage Crafts -->
+        <section class="mb-24">
+            <h3 class="text-xl font-bold uppercase tracking-wider text-amber-800 border-b border-stone-200 pb-2 mb-6">Heritage Crafts & Gifts</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Lye Soap -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1607006342456-ba275cd34840?auto=format&fit=crop&w=600&q=80" alt="Handmade Soap" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Triple-Threat Plain Lye Soap</h4>
+                        <p class="text-sm text-stone-600">Hot process soap made with entirely natural fragrances and colors. Available in three custom varieties: Ghost, Gentle, and Trail Medic.</p>
+                    </div>
+                </div>
+
+                <!-- Aprons & Parcel Post -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1534653299134-96a171b61581?auto=format&fit=crop&w=600&q=80" alt="Textiles" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Aprons & Gram’s Parcel Post</h4>
+                        <p class="text-sm text-stone-600">Heavy unbleached muslin heritage aprons (with custom embroidery kits available next door!). Plus memory jars, postcards, and our writing desk with flat-rate shipping.</p>
+                    </div>
+                </div>
+
+                <!-- Sea Turtle Bracelets -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden border border-stone-100">
+                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80" alt="Bracelets" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="font-bold text-lg mb-1 text-stone-950">Mike’s Sea Turtle Bracelets</h4>
+                        <p class="text-sm text-stone-600">Handcrafted bracelets displayed with a special memorial sign. A meaningful keepsake to take home from the festival.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="border-stone-200 mb-16">
+
+        <!-- Upcoming Events Section -->
+        <section class="max-w-3xl mx-auto bg-stone-100 rounded-2xl p-8 border border-stone-200 shadow-sm text-center">
+            <h3 class="text-2xl font-serif font-bold text-stone-900 mb-2">Find Us at Upcoming Events</h3>
+            <p class="text-stone-600 mb-6">We love setting up at local vendor events, craft fairs, and heritage festivals. Come visit our booth!</p>
+            
+            <div class="space-y-4 max-w-md mx-auto text-left">
+                <!-- Event 1 -->
+                <div class="flex items-start gap-4 bg-white p-4 rounded-xl border border-stone-200/60 shadow-sm">
+                    <div class="bg-amber-700 text-white font-bold rounded-lg px-3 py-1 text-center min-w-[70px]">
+                        <span class="block text-xs uppercase tracking-tight">June</span>
+                        <span class="block text-xl leading-none">19-20</span>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-stone-950 text-base">Yakfest</h4>
+                        <p class="text-sm text-stone-600">St. Albans, West Virginia</p>
+                    </div>
+                </div>
+                
+                <!-- Pending Schedule Placeholder -->
+                <div class="text-center py-4 px-2 border-2 border-dashed border-stone-300 rounded-xl">
+                    <p class="text-sm font-medium text-stone-500 italic">More festival and fair dates coming soon! Schedule to come.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Contact & Footer Section -->
+    <footer class="bg-stone-900 text-stone-300 py-16 px-6 border-t border-stone-800">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-serif font-bold text-amber-100 mb-4">Have Questions or Want to Place a Special Order?</h2>
+            <p class="text-stone-400 mb-8 max-w-lg mx-auto">
+                While we aren't accepting direct online checkouts right now, we’d love to hear from you. Drop us a line regarding custom wood pieces, bulk orders, or event inquiries.
+            </p>
+            
+            <!-- Email Action Card -->
+            <a href="mailto:gramsholler@gmail.com" class="inline-flex items-center gap-3 bg-amber-700 hover:bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg transition shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                gramsholler@gmail.com
+            </a>
+
+            <div class="mt-12 pt-8 border-t border-stone-800 text-xs text-stone-500">
+                &copy; 2026 Gramsholler Homestead & Woodcraft.
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
