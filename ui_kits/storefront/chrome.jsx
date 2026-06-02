@@ -87,7 +87,7 @@ function StoryStrip() {
   );
 }
 
-function Footer() {
+function Footer({ setCategory }) {
   const cols = [
     { h: "The shop", links: ["Woodwork", "Textiles", "Pantry", "Homestead"] },
     { h: "The holler", links: ["Our story", "How we make it", "Visit the workshop", "Wholesale"] },
@@ -110,7 +110,21 @@ function Footer() {
             <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gh-wheat)", marginBottom: 12 }}>{col.h}</div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 9 }}>
               {col.links.map((l) => (
-                <li key={l}><a href="#" onClick={(e) => e.preventDefault()} style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}>{l}</a></li>
+               <li key={l}>
+  <a 
+    href="#" 
+    onClick={(e) => { 
+      e.preventDefault(); 
+      if (["Woodwork", "Textiles", "Pantry", "Homestead"].includes(l)) {
+        setCategory(l); 
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }} 
+    style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}
+  >
+    {l}
+  </a>
+</li>
               ))}
             </ul>
           </div>
