@@ -90,7 +90,8 @@ function StoryStrip() {
 function Footer({ setCategory }) {
   const cols = [
     { h: "The shop", links: ["Woodwork", "Textiles", "Pantry", "Homestead"] },
-    { h: "The holler", links: ["Our story", "How we make it", "Visit the workshop", "Wholesale"] },
+    // "Wholesale" is now completely removed from the list below!
+    { h: "The holler", links: ["Our story", "How we make it", "Visit the workshop"] },
     { h: "Help", links: ["Shipping & returns", "Care & keeping", "Contact us"] },
   ];
   return (
@@ -109,23 +110,31 @@ function Footer({ setCategory }) {
           <div key={col.h}>
             <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gh-wheat)", marginBottom: 12 }}>{col.h}</div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 9 }}>
-              {col.links.map((l) => (
-                <li key={l}>
-                  <a 
-                    href={l === "Our story" ? "./story.html" : "#"} 
-                    onClick={(e) => { 
-                      if (["Woodwork", "Textiles", "Pantry", "Homestead"].includes(l)) {
-                        e.preventDefault(); 
-                        setCategory(l); 
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                      }
-                    }} 
-                    style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}
-                  >
-                    {l}
-                  </a>
-                </li>
-              ))}
+              {col.links.map((l) => {
+                // This smart helper assigns the right page file destination based on the name clicked
+                let destination = "#";
+                if (l === "Our story") destination = "./story.html";
+                if (l === "How we make it") destination = "./how.html";
+                if (l === "Visit the workshop") destination = "./workshop.html";
+
+                return (
+                  <li key={l}>
+                    <a 
+                      href={destination} 
+                      onClick={(e) => { 
+                        if (["Woodwork", "Textiles", "Pantry", "Homestead"].includes(l)) {
+                          e.preventDefault(); 
+                          setCategory(l); 
+                          window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                      }} 
+                      style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}
+                    >
+                      {l}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
