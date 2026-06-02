@@ -1,0 +1,29 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gram&#39;s Holler emblem">
+  <defs>
+    <clipPath id="ghDisc">
+      <circle cx="120" cy="120" r="104"></circle>
+    </clipPath>
+  </defs>
+
+  
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#9E3A24" stroke-width="3"></circle>
+  <circle cx="120" cy="120" r="104" fill="#FBF4E2"></circle>
+
+  <g clip-path="url(#ghDisc)">
+    
+    <rect x="16" y="16" width="208" height="208" fill="#EBD9B0"></rect>
+    
+    <circle cx="124" cy="118" r="42" fill="#DEBB5E"></circle>
+    <circle cx="124" cy="118" r="42" fill="none" stroke="#C8902C" stroke-width="2" opacity="0.6"></circle>
+
+    
+    <path d="M16 176 L62 122 L96 150 L138 104 L176 142 L224 176 L224 224 L16 224 Z" fill="#8C9A6B"></path>
+    
+    <path d="M16 184 L84 96 L120 138 L156 78 L224 184 L224 224 L16 224 Z" fill="#354029"></path>
+    
+    <path d="M92 150 Q120 138 150 150" fill="none" stroke="#FBF4E2" stroke-width="3" stroke-linecap="round" opacity="0.5"></path>
+  </g>
+
+  
+  <circle cx="120" cy="120" r="104" fill="none" stroke="#9E3A24" stroke-width="1.5" opacity="0.5"></circle>
+</svg>

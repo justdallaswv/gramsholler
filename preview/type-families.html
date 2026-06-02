@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 16px; }
+  .fam { display: grid; grid-template-columns: 150px 1fr; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 14px; }
+  .fam:last-child { border-bottom: none; padding-bottom: 0; }
+  .meta .nm { font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--gh-ink); }
+  .meta .role { font-family: var(--font-body); font-size: 12px; color: var(--gh-oak); display: block; margin-top: 2px; line-height: 1.3; }
+  .spec-rye { font-family: var(--font-display); font-size: 34px; color: var(--gh-barn); }
+  .spec-bitter { font-family: var(--font-heading); font-weight: 700; font-size: 32px; color: var(--gh-ink); }
+  .spec-spectral { font-family: var(--font-body); font-size: 28px; color: var(--gh-ink); }
+  .spec-caveat { font-family: var(--font-hand); font-size: 36px; color: var(--gh-moss); }
+</style>
+</head>
+<body class="card-grain">
+  <div class="fam">
+    <div class="meta"><span class="nm">Rye</span><span class="role">Display · logotype only</span></div>
+    <div class="spec-rye">Gram's Holler</div>
+  </div>
+  <div class="fam">
+    <div class="meta"><span class="nm">Bitter</span><span class="role">Slab · headings & eyebrows</span></div>
+    <div class="spec-bitter">Made to last</div>
+  </div>
+  <div class="fam">
+    <div class="meta"><span class="nm">Spectral</span><span class="role">Serif · all body copy</span></div>
+    <div class="spec-spectral">Carved by hand, rubbed with beeswax.</div>
+  </div>
+  <div class="fam">
+    <div class="meta"><span class="nm">Caveat</span><span class="role">Hand · tags, prices, quotes</span></div>
+    <div class="spec-caveat">a note from the holler</div>
+  </div>
+</body>
+</html>

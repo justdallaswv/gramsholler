@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { display: flex; gap: 18px; align-items: flex-start; }
+  .field { flex: 1; }
+  label { font-family: var(--font-heading); font-weight: 600; font-size: 12px; color: var(--gh-bark); display: block; margin-bottom: 6px; }
+  input, select {
+    width: 100%; font-family: var(--font-body); font-size: 16px; color: var(--gh-ink);
+    background: var(--gh-paper-warm); border: 1.5px solid var(--border-strong); border-radius: var(--radius-md);
+    padding: 11px 13px; box-shadow: var(--shadow-inset);
+  }
+  input::placeholder { color: var(--gh-tan); }
+  input.focus { outline: 2px solid var(--gh-goldenrod); outline-offset: 2px; border-color: var(--gh-oak); }
+  .hint { font-family: var(--font-body); font-size: 12px; color: var(--gh-oak); margin-top: 6px; }
+  .check { display: flex; align-items: center; gap: 9px; margin-top: 10px; font-family: var(--font-body); font-size: 15px; color: var(--gh-ink); }
+  .box { width: 20px; height: 20px; border-radius: 4px; background: var(--gh-barn); display: grid; place-items: center; color: #fff; font-size: 13px; }
+</style>
+</head>
+<body class="card-grain">
+  <div class="field">
+    <label>Your name</label>
+    <input value="Eliza" />
+    <div class="hint">So we know who we're writing to.</div>
+  </div>
+  <div class="field">
+    <label>Email</label>
+    <input class="focus" placeholder="you@example.com" />
+    <div class="check"><span class="box">✓</span> Send me a note from the holler</div>
+  </div>
+</body>
+</html>

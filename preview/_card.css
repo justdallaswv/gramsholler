@@ -1,0 +1,30 @@
+/* Shared styling for Gram's Holler design-system preview cards */
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--gh-paper);
+  color: var(--gh-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  padding: 22px 26px;
+}
+.card-grain {
+  /* a whisper of paper grain */
+  background-image: radial-gradient(rgba(92,63,42,0.05) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+.row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.col { display: flex; flex-direction: column; }
+.muted { color: var(--gh-bark); }
+.mono-meta {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--gh-oak);
+  text-transform: uppercase;
+}
+.swatch {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(44,32,20,0.10);
+}

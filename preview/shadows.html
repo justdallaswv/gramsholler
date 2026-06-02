@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { display: flex; gap: 22px; align-items: center; }
+  .item { text-align: center; }
+  .box { width: 100px; height: 74px; background: var(--gh-paper-warm); border-radius: var(--radius-lg); display: grid; place-items: center; }
+  .box.inset { box-shadow: var(--shadow-inset); background: var(--gh-kraft); }
+  .nm { font-family: var(--font-heading); font-weight: 600; font-size: 12px; color: var(--gh-ink); margin-top: 12px; }
+  .v { font-family: var(--font-body); font-size: 11px; color: var(--gh-oak); }
+</style>
+</head>
+<body class="card-grain">
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="nm">sm</div><div class="v">subtle lift</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-md)"></div><div class="nm">md</div><div class="v">cards</div></div>
+  <div class="item"><div class="box" style="box-shadow:var(--shadow-lg)"></div><div class="nm">lg</div><div class="v">popovers</div></div>
+  <div class="item"><div class="box inset"></div><div class="nm">inset</div><div class="v">sunk / inputs</div></div>
+</body>
+</html>

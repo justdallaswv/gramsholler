@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 16px; }
+  .grp { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .chip { font-family: var(--font-heading); font-weight: 600; font-size: 13px; padding: 6px 14px; border-radius: 999px; }
+  .chip.on { background: var(--gh-holler); color: var(--gh-paper-warm); }
+  .chip.off { background: transparent; color: var(--gh-bark); border: 1.5px solid var(--border-strong); }
+  .badge { font-family: var(--font-heading); font-weight: 700; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 9px; border-radius: var(--radius-sm); }
+  .b-stock { background: color-mix(in srgb, var(--gh-moss) 20%, transparent); color: var(--gh-moss); }
+  .b-low { background: color-mix(in srgb, var(--gh-goldenrod) 24%, transparent); color: #8a5e10; }
+  .b-sale { background: var(--gh-barn); color: var(--gh-paper-warm); }
+  /* hand-tied price tag */
+  .ptag { position: relative; background: var(--gh-kraft); border: 1.5px dashed rgba(44,32,20,0.35);
+    border-radius: var(--radius-tag); padding: 8px 14px 8px 24px; display: inline-flex; flex-direction: column; }
+  .ptag::before { content:""; position:absolute; left:9px; top:50%; transform:translateY(-50%); width:9px; height:9px; border-radius:50%; background: var(--gh-paper); box-shadow: inset 0 0 0 1.5px rgba(44,32,20,0.4); }
+  .ptag .h { font-family: var(--font-hand); font-size: 15px; color: var(--gh-bark); line-height: 1; }
+  .ptag .p { font-family: var(--font-heading); font-weight: 700; font-size: 19px; color: var(--gh-ink); }
+</style>
+</head>
+<body class="card-grain">
+  <div class="grp">
+    <span class="chip on">Woodwork</span>
+    <span class="chip off">Textiles</span>
+    <span class="chip off">Pantry</span>
+    <span class="chip off">Homestead</span>
+  </div>
+  <div class="grp">
+    <span class="badge b-stock">In stock</span>
+    <span class="badge b-low">Only 2 left</span>
+    <span class="badge b-sale">On sale</span>
+    <div class="ptag"><span class="h">walnut spoon</span><span class="p">$38</span></div>
+  </div>
+</body>
+</html>

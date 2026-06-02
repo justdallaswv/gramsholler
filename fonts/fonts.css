@@ -1,0 +1,10 @@
+/* Gram's Holler — webfont loader (Google Fonts CDN)
+   NOTE: fonts are loaded from Google Fonts rather than self-hosted .ttf/.woff.
+   If you need offline / self-hosted files, download these families and drop
+   them in fonts/ then swap this @import for local @font-face rules.
+     - Rye       (display / logotype)
+     - Bitter    (slab headings)  weights 400,600,700
+     - Spectral  (body serif)     weights 400,500,600 + italics
+     - Caveat    (handwriting)    weights 400,600
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Bitter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@400;600;700&display=swap');

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../fonts/fonts.css">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 16px; }
+  .grp { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .btn { font-family: var(--font-heading); font-weight: 600; font-size: 15px; border-radius: var(--radius-md);
+    padding: 11px 22px; border: 1.5px solid transparent; cursor: pointer; letter-spacing: 0.01em; }
+  .primary { background: var(--gh-barn); color: var(--gh-paper-warm); box-shadow: var(--shadow-sm); }
+  .primary.hover { background: var(--gh-clay); }
+  .primary.press { background: var(--gh-ember); transform: scale(0.99); }
+  .secondary { background: transparent; color: var(--gh-holler); border-color: var(--gh-holler); }
+  .ghost { background: transparent; color: var(--gh-bark); border-color: var(--border); }
+  .gold { background: var(--gh-goldenrod); color: var(--gh-walnut); }
+  .lbl { font-family: var(--font-heading); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gh-oak); width: 86px; flex: none; }
+</style>
+</head>
+<body class="card-grain">
+  <div class="grp"><span class="lbl">Primary</span>
+    <button class="btn primary">Add to basket</button>
+    <button class="btn primary hover">Hover</button>
+    <button class="btn primary press">Pressed</button>
+  </div>
+  <div class="grp"><span class="lbl">Secondary</span>
+    <button class="btn secondary">Read the story</button>
+    <button class="btn ghost">Cancel</button>
+    <button class="btn gold">Save 10%</button>
+  </div>
+</body>
+</html>
