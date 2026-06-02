@@ -1,1 +1,76 @@
 
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram-isms | Wisdom from the Holler</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fcfaf2] text-stone-800 font-serif flex flex-col min-h-screen">
+
+    <!-- Simple Navigation Back Home -->
+    <div class="bg-stone-900 text-[#fcfaf2] py-3 px-6 text-sm">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <span class="font-sans font-bold tracking-wider text-amber-500 text-xs uppercase">Gram's Holler</span>
+            <a href="index.html" class="font-sans text-stone-300 hover:text-[#fbf2c0] transition text-xs uppercase tracking-wider flex items-center gap-1">
+                &larr; Back to Inventory
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="max-w-3xl mx-auto px-6 py-16 flex-grow text-center">
+        <span class="text-amber-700 uppercase tracking-widest text-xs font-sans font-bold block mb-2">Mountain Wit & Wisdom</span>
+        <h1 class="text-4xl font-bold tracking-tight mb-4 text-stone-950">Gram-isms</h1>
+        <div class="w-16 h-1 bg-emerald-800 mx-auto mb-8 rounded"></div>
+        
+        <p class="text-stone-600 font-sans italic max-w-md mx-auto mb-12 text-sm leading-relaxed">
+            "Old sayings are like old paths—they wouldn't be there if they didn't lead somewhere sensible." Down in the holler, these bits of folk wisdom have guided our family for generations.
+        </p>
+
+        <!-- The Sayings Grid/List -->
+        <div class="space-y-8 max-w-xl mx-auto text-left">
+            
+            <div class="bg-[#f7f4e9] p-6 rounded-xl border border-stone-200/60 shadow-xs">
+                <p class="text-xl font-bold text-emerald-900 mb-2">"Slower than molasses in January."</p>
+                <p class="font-sans text-xs text-stone-500 italic uppercase tracking-wider mb-1">Meaning:</p>
+                <p class="font-sans text-sm text-stone-600 leading-relaxed">Taking your sweet time. Out here, rushing through your work just means you'll have to do it twice.</p>
+            </div>
+
+            <div class="bg-[#f7f4e9] p-6 rounded-xl border border-stone-200/60 shadow-xs">
+                <p class="text-xl font-bold text-emerald-900 mb-2">"That dog won't hunt."</p>
+                <p class="font-sans text-xs text-stone-500 italic uppercase tracking-wider mb-1">Meaning:</p>
+                <p class="font-sans text-sm text-stone-600 leading-relaxed">An idea or excuse that simply isn't going to work. Keep it honest and keep it practical.</p>
+            </div>
+
+            <div class="bg-[#f7f4e9] p-6 rounded-xl border border-stone-200/60 shadow-xs">
+                <p class="text-xl font-bold text-emerald-900 mb-2">"You can't make a silk purse out of a sow's ear."</p>
+                <p class="font-sans text-xs text-stone-500 italic uppercase tracking-wider mb-1">Meaning:</p>
+                <p class="font-sans text-sm text-stone-600 leading-relaxed">You can't mask poor quality with fancy decorations. That's why we build our goods out of solid wood and honest ingredients.</p>
+            </div>
+
+            <div class="bg-[#f7f4e9] p-6 rounded-xl border border-stone-200/60 shadow-xs">
+                <p class="text-xl font-bold text-emerald-900 mb-2">"Don't get above your raisin'."</p>
+                <p class="font-sans text-xs text-stone-500 italic uppercase tracking-wider mb-1">Meaning:</p>
+                <p class="font-sans text-sm text-stone-600 leading-relaxed">Never forget where you came from, and don't put on airs. Stay humble, stay kind, and remember your roots.</p>
+            </div>
+
+            <div class="bg-[#f7f4e9] p-6 rounded-xl border border-stone-200/60 shadow-xs">
+                <p class="text-xl font-bold text-emerald-900 mb-2">"Even a blind hog finds an acorn every now and then."</p>
+                <p class="font-sans text-xs text-stone-500 italic uppercase tracking-wider mb-1">Meaning:</p>
+                <p class="font-sans text-sm text-stone-600 leading-relaxed">A little bit of luck happens to everyone eventually, regardless of skill. Count your blessings when it does!</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Simple Page Footer -->
+    <footer class="bg-stone-950 text-stone-600 py-8 px-6 text-center text-xs font-sans tracking-wide border-t border-stone-900">
+        &copy; 2026 Gram's Holler. Handcrafted in the hills.
+    </footer>
+
+</body>
+</html>
