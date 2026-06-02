@@ -77,4 +77,13 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+// This forces the main app to safely pull the fresh Drawer from the window object dynamically
+const MainApp = () => {
+  const Drawer = window.BasketDrawer || (() => null);
+  return <App />;
+};
+
+// Wait a tiny frame for Babel to unpack everything perfectly, then boot up the site!
+setTimeout(() => {
+  ReactDOM.createRoot(document.getElementById("root")).render(<MainApp />);
+}, 50);
