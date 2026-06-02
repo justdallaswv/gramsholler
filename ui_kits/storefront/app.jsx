@@ -59,8 +59,12 @@ function App() {
         )}
       </main>
 
-      <Footer />
-      <BasketDrawer open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onRemove={remove} />
+      <Footer 
+  setCategory={(cat) => {
+    setCategory(cat); // Change the category filter
+    setView("home");  // Make sure we are back on the homepage grid view
+  }} 
+/>
 
       {/* toast */}
       <div style={{ position: "fixed", bottom: 24, left: "50%", transform: `translateX(-50%) translateY(${toast ? 0 : 16}px)`,
