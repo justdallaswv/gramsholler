@@ -65,7 +65,7 @@ function App() {
     setView("home");  // Make sure we are back on the homepage grid view
   }} 
 />
-
+<window.BasketDrawer open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onRemove={remove} />
       {/* toast */}
       <div style={{ position: "fixed", bottom: 24, left: "50%", transform: `translateX(-50%) translateY(${toast ? 0 : 16}px)`,
         opacity: toast ? 1 : 0, transition: "all var(--dur) var(--ease-rock)", pointerEvents: "none", zIndex: 50,
