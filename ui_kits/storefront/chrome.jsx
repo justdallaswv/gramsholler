@@ -110,38 +110,21 @@ function Footer({ setCategory }) {
             <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: 13, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gh-wheat)", marginBottom: 12 }}>{col.h}</div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 9 }}>
               {col.links.map((l) => (
-               <li key={l}>
-  <a 
-    href="#" 
-    onClick={(e) => { 
-      e.preventDefault(); 
-      if (["Woodwork", "Textiles", "Pantry", "Homestead"].includes(l)) {
-        setCategory(l); 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    }} 
-    style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}
-  >
-    {l}
-  </a>
-</li>
-            <li key={l}>
-  <a 
-    href={l === "Our story" ? "./story.html" : "#"} 
-    onClick={(e) => { 
-      // If it's a shop filter, handle it with state logic
-      if (["Woodwork", "Textiles", "Pantry", "Homestead"].includes(l)) {
-        e.preventDefault(); 
-        setCategory(l); 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-      // If it's Our Story, let the browser naturally open the story.html file!
-    }} 
-    style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}
-  >
-    {l}
-  </a>
-</li>
+                <li key={l}>
+                  <a 
+                    href={l === "Our story" ? "./story.html" : "#"} 
+                    onClick={(e) => { 
+                      if (["Woodwork", "Textiles", "Pantry", "Homestead"].includes(l)) {
+                        e.preventDefault(); 
+                        setCategory(l); 
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
+                    }} 
+                    style={{ fontFamily: "var(--font-body)", fontSize: 14.5, color: "color-mix(in srgb, var(--gh-paper-warm) 78%, transparent)", textDecoration: "none" }}
+                  >
+                    {l}
+                  </a>
+                </li>
               ))}
             </ul>
           </div>
