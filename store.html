@@ -46,11 +46,51 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(44, 32, 20, 0.08);
   }
+
+  /* Disclaimer Banner Style */
+  .store-disclaimer-banner {
+    background-color: var(--gh-bg-card, #FBF4E2);
+    border-bottom: 2px dashed rgba(44, 32, 20, 0.15);
+    padding: 16px 24px;
+    text-align: center;
+    font-family: 'Spectral', serif;
+    font-size: 1.05rem;
+    color: var(--gh-text-walnut, #2C2014);
+    position: relative;
+    z-index: 99;
+    margin-top: 0;
+  }
+  
+  .store-disclaimer-banner strong {
+    font-family: 'Bitter', serif;
+    color: var(--gh-accent-barn, #9E3A24);
+  }
+
+  /* Custom Override CSS to safely swap your real products into the React grid placeholders */
+  /* This targets the first 3 catalog items dynamically once they load */
+  
+  /* 1. Apple Butter Override ($6.00) */
+  div[class*="product-grid"] div:nth-child(1) img, 
+  .product-card-image-1 { content: url('assets/apple.jpeg') !important; }
+  
+  /* 2. Pear Butter Override ($7.00) */
+  div[class*="product-grid"] div:nth-child(2) img,
+  .product-card-image-2 { content: url('assets/pearbutter.jpeg') !important; }
+  
+  /* 3. Toy Wooden Cars & Trains Override ($6.00) */
+  div[class*="product-grid"] div:nth-child(3) img,
+  .product-card-image-3 { content: url('assets/woodtrainandcar.jpeg') !important; }
 </style>
 </head>
 <body>
+  
+  <!-- Friendly Notice Banner -->
+  <div class="store-disclaimer-banner">
+    <strong>Pardon our dust:</strong> Many of the items below are imaginary placeholders used to help us build out our digital shelves. However, our real creations are seasoning right behind the scenes!
+  </div>
+
   <!-- Floating Return Link placed at the top left of the layout -->
-  <a href="index.html" class="back-home-badge">
+  <a href="index.html" class="back-home-badge" style="top: 80px;">
     <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i>
     <span>Back to main page</span>
   </a>
