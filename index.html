@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="colors_and_type.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Baseline Layout aligned to Gram's Holler Spec */
+        /* FIXED: Using exact --gh-paper token with a safe cream (#F3E8CF) fallback */
         body {
-            background-color: var(--gh-bg-paper, #F3E8CF);
+            background-color: var(--gh-paper, #F3E8CF);
             color: var(--gh-text-walnut, #2C2014);
             font-family: 'Spectral', serif;
             margin: 0;
@@ -39,7 +39,7 @@
         }
 
         .logo-image {
-            height: 64px; /* Increased from 48px for a slightly larger layout footprint */
+            height: 64px;
             width: auto;
             object-fit: contain;
         }
@@ -135,4 +135,159 @@
 
         .btn-secondary:hover {
             background-color: var(--gh-text-walnut, #2C2014);
-            color: var(--gh
+            color: #F3E8CF;
+            transform: translateY(-1px);
+        }
+
+        /* Showcase Heading */
+        .section-title {
+            text-align: center;
+            font-family: 'Bitter', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin: 64px 0 16px 0;
+        }
+
+        /* Features / Product Grid */
+        .features-grid {
+            max-width: 1100px;
+            margin: 0 auto 96px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            padding: 0 16px;
+        }
+
+        .feature-card {
+            background-color: var(--gh-bg-card, #FBF4E2);
+            border: 1px solid rgba(44, 32, 20, 0.1);
+            border-radius: 6px;
+            padding: 16px;
+            text-align: left;
+            text-decoration: none;
+            color: var(--gh-text-walnut, #2C2014);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 32, 20, 0.08);
+            border-color: var(--gh-accent-moss, #354029);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            background-color: rgba(44, 32, 20, 0.05);
+        }
+
+        .feature-card h3 {
+            font-family: 'Bitter', serif;
+            font-size: 1.15rem;
+            margin: 0 0 8px 0;
+            font-weight: 400;
+        }
+
+        .feature-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: rgba(44, 32, 20, 0.8);
+            flex-grow: 1;
+        }
+
+        /* Ornament Divider */
+        .ornament {
+            text-align: center;
+            color: var(--gh-accent-barn, #9E3A24);
+            font-size: 1.2rem;
+            margin: 64px 0 32px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 48px 16px;
+            border-top: 1px dashed rgba(44, 32, 20, 0.15);
+            font-size: 0.9rem;
+            color: rgba(44, 32, 20, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-area">
+            <img src="assets/gramsholldertransparent.png" alt="Gram's Holler" class="logo-image">
+        </a>
+        <nav>
+            <a href="story.html">our story</a>
+            <a href="how.html">how we work</a>
+            <a href="workshop.html">the workshop</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="eyebrow">authentic rustic goods, made by hand</div>
+            <h1>Made slow. Made to last.</h1>
+            <p class="lead-text">
+                Welcome to our corner of the Appalachian mountains. We spend our days making honest woodwares, putting up preserves, and crafting items built to survive generations. Pull up a chair and stay a while.
+            </p>
+
+            <div class="store-notice-tag">
+                <div class="tag-handwriting">Seasoning in the workshop...</div>
+                <p>The online shelves aren't quite open for business just yet. Right now, we're busy prepping a whole mess of children's toys, sewing up traditional toy horses, and baking a fresh batch of completely homemade mini apple crumb pies.</p>
+                <a href="store.html" class="btn-secondary">
+                    <span>Take a look around the shop</span>
+                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+        </section>
+
+        <div class="ornament">✦ · — · ✦</div>
+
+        <h2 class="section-title">Fresh from the Holler</h2>
+
+        <section class="features-grid">
+            
+            <div class="feature-card">
+                <img src="assets/pearbutter.jpeg" alt="Homemade Pear Butter" class="product-img">
+                <h3>Pear Butter</h3>
+                <p>Slow-simmered in small batches and put up in traditional jars. Pure autumn sweetness.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/woodduck.jpeg" alt="Toy wooden duck" class="product-img">
+                <h3>Toy wooden duck</h3>
+                <p>Classic wooden toy cut right in our shop and sanded perfectly smooth. Built for long days of play.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/woodtrainandcar.jpeg" alt="Toy wooden cars and trains" class="product-img">
+                <h3>Toy wooden cars and trains</h3>
+                <p>Sturdy timber playthings with working rolling wheels. Classic toys designed to be passed down.</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="assets/apple.jpeg" alt="Homemade Apple Butter" class="product-img">
+                <h3>Apple Butter</h3>
+                <p>Made from an honest blend of 6 different types of apples and simmered all day long in a kettle until thick and dark.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Gram's Holler. Tied up with twine in West Virginia. Set a spell, neighbor.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
