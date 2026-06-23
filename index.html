@@ -35,15 +35,15 @@
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             text-decoration: none;
             color: var(--gh-text-walnut, #2C2014);
         }
 
-        .logo-text {
-            font-family: 'Rye', serif;
-            font-size: 1.5rem;
-            margin: 0;
+        .logo-image {
+            height: 48px; /* Balanced height for the brand logo */
+            width: auto;
+            object-fit: contain;
         }
 
         nav {
@@ -56,7 +56,6 @@
             color: var(--gh-text-walnut, #2C2014);
             text-decoration: none;
             font-size: 0.95rem;
-            position: relative;
             transition: color 0.3s ease;
         }
 
@@ -67,7 +66,7 @@
         /* Hero Section */
         .hero {
             max-width: 800px;
-            margin: 96px auto 64px auto;
+            margin: 80px auto 48px auto;
             text-align: center;
             padding: 0 16px;
         }
@@ -92,7 +91,7 @@
         .lead-text {
             font-size: 1.25rem;
             max-width: 600px;
-            margin: 0 auto 48px auto;
+            margin: 0 auto 40px auto;
             color: rgba(44, 32, 20, 0.85);
         }
 
@@ -102,7 +101,6 @@
             border: 1px dashed rgba(44, 32, 20, 0.3);
             border-radius: 6px;
             padding: 24px;
-            max-width: 48px;
             max-width: 450px;
             margin: 0 auto;
             box-shadow: 0 4px 12px rgba(44, 32, 20, 0.05);
@@ -141,13 +139,22 @@
             transform: translateY(-1px);
         }
 
-        /* Features / Secondary Links Grid */
+        /* Showcase Heading */
+        .section-title {
+            text-align: center;
+            font-family: 'Bitter', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin: 64px 0 16px 0;
+        }
+
+        /* Features / Product Grid */
         .features-grid {
-            max-width: 960px;
-            margin: 64px auto 96px auto;
+            max-width: 1100px;
+            margin: 0 auto 96px auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
             padding: 0 16px;
         }
 
@@ -155,33 +162,42 @@
             background-color: var(--gh-bg-card, #FBF4E2);
             border: 1px solid rgba(44, 32, 20, 0.1);
             border-radius: 6px;
-            padding: 32px;
+            padding: 16px;
             text-align: left;
             text-decoration: none;
             color: var(--gh-text-walnut, #2C2014);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .feature-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(44, 32, 20, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(44, 32, 20, 0.08);
             border-color: var(--gh-accent-moss, #354029);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            background-color: rgba(44, 32, 20, 0.05);
         }
 
         .feature-card h3 {
             font-family: 'Bitter', serif;
-            font-size: 1.3rem;
-            margin: 0 0 12px 0;
+            font-size: 1.15rem;
+            margin: 0 0 8px 0;
             font-weight: 400;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
         .feature-card p {
             margin: 0;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: rgba(44, 32, 20, 0.8);
+            flex-grow: 1;
         }
 
         /* Ornament Divider */
@@ -189,7 +205,7 @@
             text-align: center;
             color: var(--gh-accent-barn, #9E3A24);
             font-size: 1.2rem;
-            margin: 48px 0;
+            margin: 64px 0 32px 0;
         }
 
         /* Footer */
@@ -207,9 +223,8 @@
     <!-- Header / Navigation -->
     <header>
         <a href="index.html" class="logo-area">
-            <!-- Fallback to text if SVG isn't loaded yet -->
-            <img src="assets/logo-mark.svg" alt="" width="32" height="32" onerror="this.style.display='none'">
-            <h1 class="logo-text">Gram's Holler</h1>
+            <!-- Utilizing your exact logo filename -->
+            <img src="assets/gramshollerlogo.png" alt="Gram's Holler" class="logo-image">
         </a>
         <nav>
             <a href="story.html">our story</a>
@@ -224,7 +239,7 @@
             <div class="eyebrow">authentic rustic goods, made by hand</div>
             <h1>Made slow. Made to last.</h1>
             <p class="lead-text">
-                Welcome to our corner of the Appalachian mountains. We spend our days shaping honest wood, putting up preserves, and weaving textiles built to survive generations. Pull up a chair and stay a while.
+                Welcome to our corner of the Appalachian mountains. We spend our days shaping honest wood, putting up preserves, and crafting items built to survive generations. Pull up a chair and stay a while.
             </p>
 
             <!-- Shop Coming Soon Container -->
@@ -240,22 +255,39 @@
 
         <div class="ornament">✦ · — · ✦</div>
 
-        <!-- Repository Mapping to Existing Pages -->
+        <h2 class="section-title">Fresh from the Holler</h2>
+
+        <!-- Product Preview Grid mapping directly to your assets -->
         <section class="features-grid">
-            <a href="story.html" class="feature-card">
-                <h3><span>The Story</span> <i data-lucide="scroll" style="width: 18px; height: 18px;"></i></h3>
-                <p>Read about the quiet, green valley we call home and why we choose to make things by lantern light.</p>
-            </a>
+            
+            <!-- Item 1: Pear Butter -->
+            <div class="feature-card">
+                <img src="assets/pearbutter.jpeg" alt="Homemade Pear Butter" class="product-img">
+                <h3>Pear Butter</h3>
+                <p>Slow-simmered in small batches and put up in traditional jars. Pure autumn sweetness.</p>
+            </div>
 
-            <a href="how.html" class="feature-card">
-                <h3><span>How We Work</span> <i data-lucide="hammer" style="width: 18px; height: 18px;"></i></h3>
-                <p>No slick assembly lines here. Learn about our commitment to seasoned lumber, natural beeswax, and generational craft.</p>
-            </a>
+            <!-- Item 2: Wood Duck -->
+            <div class="feature-card">
+                <img src="assets/woodduck.jpeg" alt="Hand-carved Wood Duck" class="product-img">
+                <h3>Carved Wood Duck</h3>
+                <p>Whittled patiently from local timber, capturing a quiet morning down by the creek.</p>
+            </div>
 
-            <a href="workshop.html" class="feature-card">
-                <h3><span>The Workshop</span> <i data-lucide="home" style="width: 18px; height: 18px;"></i></h3>
-                <p>Take a look inside the space where woodsmoke hangs in the air and old tools find new life every morning.</p>
-            </a>
+            <!-- Item 3: Wood Train and Car -->
+            <div class="feature-card">
+                <img src="assets/woodtrainandcar.jpeg" alt="Handcrafted Wood Train and Car" class="product-img">
+                <h3>Handcrafted Toy Train</h3>
+                <p>Built sturdy with rolling wheels and raw timber charm. Made to survive generations of play.</p>
+            </div>
+
+            <!-- Item 4: Apple -->
+            <div class="feature-card">
+                <img src="assets/apple.jpeg" alt="Rustic Carved Apple" class="product-img">
+                <h3>Whittled Orchard Apple</h3>
+                <p>A simple decorative tribute to our mountain orchards, polished to highlight the natural woodgrain.</p>
+            </div>
+
         </section>
     </main>
 
