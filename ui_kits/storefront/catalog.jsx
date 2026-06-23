@@ -30,7 +30,7 @@ const CATEGORIES = ["All", "Woodwork", "Textiles", "Pantry", "Homestead"];
 function ProductCard({ product, onOpen, onAdd }) {
   const [hover, setHover] = React.useState(false);
   
-  // Custom mapping to ensure your real asset images show up on the correct items
+  // Clean image path selector
   let imageSource = null;
   if (product.id === "apple_butter") imageSource = "assets/apple.jpeg";
   if (product.id === "pear_butter") imageSource = "assets/pearbutter.jpeg";
@@ -48,7 +48,7 @@ function ProductCard({ product, onOpen, onAdd }) {
       }}>
       <div style={{ position: "relative" }}>
         {imageSource ? (
-          <img src={imageSource} alt={product.name} style={{ width: "100%", height: "170px", object-fit: "cover" }} />
+          <img src={imageSource} alt={product.name} style={{ width: "100%", height: "170px", objectFit: "cover", display: "block" }} />
         ) : (
           <Placeholder category={product.category} height={170} />
         )}
