@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="colors_and_type.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Baseline Layout aligned to Gram's Holler Spec */
+        /* FIXED: Using exact --gh-paper token with a safe cream (#F3E8CF) fallback */
         body {
             background-color: var(--gh-paper, #F3E8CF);
             color: var(--gh-text-walnut, #2C2014);
@@ -19,20 +19,20 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation - Now centered and clean without the logo */
+        /* Navigation - Cleaned up and perfectly centered */
         header {
             max-width: 1200px;
             margin: 0 auto;
             padding: 24px 16px;
             display: flex;
-            justify-content: center; /* Centers the navigation links */
+            justify-content: center; 
             align-items: center;
             border-bottom: 1px dashed rgba(44, 32, 20, 0.15);
         }
 
         nav {
             display: flex;
-            gap: 32px; /* Slightly wider spacing for balanced layout */
+            gap: 32px;
         }
 
         nav a {
@@ -50,20 +50,21 @@
         /* Hero Section */
         .hero {
             max-width: 800px;
-            margin: 64px auto 48px auto; /* adjusted top margin to account for new logo placement */
+            margin: 64px auto 48px auto;
             text-align: center;
             padding: 0 16px;
         }
 
-        /* Centered Logo Layout */
+        /* NEW STYLE: Centering container for your large logo */
         .hero-logo-container {
             margin-bottom: 32px;
             display: flex;
             justify-content: center;
         }
 
+        /* NEW STYLE: Large and proud centered layout footprint */
         .hero-logo-image {
-            height: 120px; /* Made larger to stand out proudly in the center */
+            height: 200px; /* Adjust this number to tweak the size higher or lower */
             width: auto;
             object-fit: contain;
         }
@@ -219,7 +220,7 @@
 </head>
 <body>
 
-    <!-- Header Navigation (Clean links, centered) -->
+    <!-- Header navigation with no logo element inside -->
     <header>
         <nav>
             <a href="index.html">home</a>
@@ -232,7 +233,7 @@
 
     <main>
         <section class="hero">
-            <!-- Centered & Enlarged Transparent Logo Layer -->
+            <!-- Large, Centered transparent logo placed right above page text -->
             <div class="hero-logo-container">
                 <img src="assets/gramsholldertransparent.png" alt="Gram's Holler Logo" class="hero-logo-image">
             </div>
