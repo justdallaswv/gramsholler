@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram's Holler — Authentic Rustic Goods, Made by Hand</title>
+    <!-- Brand Fonts & Design Tokens -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="colors_and_type.css">
+    <!-- Lucide Icons CDN (as per design system spec) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Baseline Layout aligned to Gram's Holler Spec */
+        body {
+            background-color: var(--gh-bg-paper, #F3E8CF);
+            color: var(--gh-text-walnut, #2C2014);
+            font-family: 'Spectral', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        header {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px dashed rgba(44, 32, 20, 0.15);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--gh-text-walnut, #2C2014);
+        }
+
+        .logo-text {
+            font-family: 'Rye', serif;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-family: 'Bitter', serif;
+            color: var(--gh-text-walnut, #2C2014);
+            text-decoration: none;
+            font-size: 0.95rem;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gh-accent-barn, #9E3A24);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 800px;
+            margin: 96px auto 64px auto;
+            text-align: center;
+            padding: 0 16px;
+        }
+
+        .eyebrow {
+            font-family: 'Bitter', serif;
+            font-size: 0.9rem;
+            text-transform: lowercase;
+            letter-spacing: 0.05em;
+            color: var(--gh-accent-barn, #9E3A24);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Bitter', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            margin: 0 0 24px 0;
+            font-weight: 400;
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 48px auto;
+            color: rgba(44, 32, 20, 0.85);
+        }
+
+        /* Coming Soon / Store Notice Tag */
+        .store-notice-tag {
+            background-color: var(--gh-bg-card, #FBF4E2);
+            border: 1px dashed rgba(44, 32, 20, 0.3);
+            border-radius: 6px;
+            padding: 24px;
+            max-width: 48px;
+            max-width: 450px;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(44, 32, 20, 0.05);
+        }
+
+        .tag-handwriting {
+            font-family: 'Caveat', cursive;
+            font-size: 1.4rem;
+            color: var(--gh-accent-goldenrod, #C8902C);
+            margin-bottom: 8px;
+        }
+
+        .store-notice-tag p {
+            margin: 0 0 16px 0;
+            font-size: 1rem;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Bitter', serif;
+            background: transparent;
+            border: 1px solid var(--gh-text-walnut, #2C2014);
+            color: var(--gh-text-walnut, #2C2014);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--gh-text-walnut, #2C2014);
+            color: var(--gh-bg-paper, #F3E8CF);
+            transform: translateY(-1px);
+        }
+
+        /* Features / Secondary Links Grid */
+        .features-grid {
+            max-width: 960px;
+            margin: 64px auto 96px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            padding: 0 16px;
+        }
+
+        .feature-card {
+            background-color: var(--gh-bg-card, #FBF4E2);
+            border: 1px solid rgba(44, 32, 20, 0.1);
+            border-radius: 6px;
+            padding: 32px;
+            text-align: left;
+            text-decoration: none;
+            color: var(--gh-text-walnut, #2C2014);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(44, 32, 20, 0.08);
+            border-color: var(--gh-accent-moss, #354029);
+        }
+
+        .feature-card h3 {
+            font-family: 'Bitter', serif;
+            font-size: 1.3rem;
+            margin: 0 0 12px 0;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .feature-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: rgba(44, 32, 20, 0.8);
+        }
+
+        /* Ornament Divider */
+        .ornament {
+            text-align: center;
+            color: var(--gh-accent-barn, #9E3A24);
+            font-size: 1.2rem;
+            margin: 48px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 48px 16px;
+            border-top: 1px dashed rgba(44, 32, 20, 0.15);
+            font-size: 0.9rem;
+            color: rgba(44, 32, 20, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <a href="index.html" class="logo-area">
+            <!-- Fallback to text if SVG isn't loaded yet -->
+            <img src="assets/logo-mark.svg" alt="" width="32" height="32" onerror="this.style.display='none'">
+            <h1 class="logo-text">Gram's Holler</h1>
+        </a>
+        <nav>
+            <a href="story.html">our story</a>
+            <a href="how.html">how we work</a>
+            <a href="workshop.html">the workshop</a>
+        </nav>
+    </header>
+
+    <!-- Main Hero Space -->
+    <main>
+        <section class="hero">
+            <div class="eyebrow">authentic rustic goods, made by hand</div>
+            <h1>Made slow. Made to last.</h1>
+            <p class="lead-text">
+                Welcome to our corner of the Appalachian mountains. We spend our days shaping honest wood, putting up preserves, and weaving textiles built to survive generations. Pull up a chair and stay a while.
+            </p>
+
+            <!-- Shop Coming Soon Container -->
+            <div class="store-notice-tag">
+                <div class="tag-handwriting">Seasoning in the workshop...</div>
+                <p>We are currently whittling away on our online shelves. The storefront isn't quite open for business just yet, but you can sneak a peek at what we've been building.</p>
+                <a href="store.html" class="btn-secondary">
+                    <span>Take a look around the shop</span>
+                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+        </section>
+
+        <div class="ornament">✦ · — · ✦</div>
+
+        <!-- Repository Mapping to Existing Pages -->
+        <section class="features-grid">
+            <a href="story.html" class="feature-card">
+                <h3><span>The Story</span> <i data-lucide="scroll" style="width: 18px; height: 18px;"></i></h3>
+                <p>Read about the quiet, green valley we call home and why we choose to make things by lantern light.</p>
+            </a>
+
+            <a href="how.html" class="feature-card">
+                <h3><span>How We Work</span> <i data-lucide="hammer" style="width: 18px; height: 18px;"></i></h3>
+                <p>No slick assembly lines here. Learn about our commitment to seasoned lumber, natural beeswax, and generational craft.</p>
+            </a>
+
+            <a href="workshop.html" class="feature-card">
+                <h3><span>The Workshop</span> <i data-lucide="home" style="width: 18px; height: 18px;"></i></h3>
+                <p>Take a look inside the space where woodsmoke hangs in the air and old tools find new life every morning.</p>
+            </a>
+        </section>
+    </main>
+
+    <!-- Brand Compliant Footer -->
+    <footer>
+        <p>© 2026 Gram's Holler. Tied up with twine in West Virginia. Set a spell, neighbor.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
