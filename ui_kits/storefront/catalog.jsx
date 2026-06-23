@@ -36,11 +36,13 @@ const CATEGORIES = ["All", "Woodwork", "Textiles", "Pantry", "Homestead"];
 function ProductCard({ product, onOpen, onAdd }) {
   const [hover, setHover] = React.useState(false);
   
-  // Clean image path selector
+  // Clean image path selector — now features soap and washcloth paths!
   let imageSource = null;
   if (product.id === "apple_butter") imageSource = "assets/apple.jpeg";
   if (product.id === "pear_butter") imageSource = "assets/pearbutter.jpeg";
   if (product.id === "wooden_cars") imageSource = "assets/woodtrainandcar.jpeg";
+  if (product.id === "lye_soap") imageSource = "assets/soap.jpg";
+  if (product.id === "washcloths") imageSource = "assets/washcloths.jpg";
 
   return (
     <div
